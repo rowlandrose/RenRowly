@@ -1,6 +1,7 @@
 RewriteEngine On
 
 # Files in these directories will not be accessable via browser (just an extra security measure)
+# If you install RenRowly on any subfolders, put them here
 RewriteCond $0 ^(.+)/controllers/ [OR]
 RewriteCond $0 ^(.+)/models/ [OR]
 
