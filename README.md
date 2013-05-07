@@ -31,12 +31,15 @@ A 'model' is a class that returns data from a source such as an api or database
 
 Update Log:
 
-- V 1.0.2 - May 7, 2013
-  Now listing requirements in README
-  Can now be installed on the web root folder or any inner folder.
+-	V 1.0.2 - May 7, 2013
 
-- V 1.0.1 - April 29, 2013
-  Added htaccess file.
+	Now listing requirements in README
+	Can now be installed on the web root folder or any inner folder.
 
-- V 1.0 - April 26, 2013
-  First release.
+-	V 1.0.1 - April 29, 2013
+
+	Added htaccess file.
+
+-	V 1.0 - April 26, 2013
+
+	First release.
