@@ -14,47 +14,50 @@ Step by Step Instructions to Get Started:
 - Check out [http://www.rowlandrose.com/experiments/renrowly](http://www.rowlandrose.com/experiments/renrowly) to see this framework in action.
 - In order to get the example working on your machine, run this SQL code on your server (ex. in phpMyAdmin) into your MySQL database:
 
-    SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-    SET time_zone = "+00:00";
-    
-    CREATE TABLE IF NOT EXISTS `blog_posts` (
-      `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-      `title` varchar(100) NOT NULL,
-      `title_url` varchar(100) NOT NULL,
-      `description` text NOT NULL,
-      `datetime` datetime NOT NULL,
-      `last_updated` datetime NOT NULL,
-      `year` int(10) unsigned NOT NULL,
-      `month` int(10) unsigned NOT NULL,
-      `day` int(10) unsigned NOT NULL,
-      `enabled` tinyint(1) NOT NULL DEFAULT '1',
-      PRIMARY KEY (`id`)
-    ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
-    
-    CREATE TABLE IF NOT EXISTS `playground_links` (
-      `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-      `url` varchar(200) NOT NULL,
-      `image_url` varchar(200) NOT NULL,
-      `title` varchar(100) NOT NULL,
-      `enabled` tinyint(1) NOT NULL DEFAULT '1',
-      `view_order` int(10) unsigned NOT NULL,
-      PRIMARY KEY (`id`),
-      UNIQUE KEY `view_order` (`view_order`)
-    ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
-    
-    CREATE TABLE IF NOT EXISTS `projects` (
-      `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-      `title` varchar(100) NOT NULL,
-      `portfolio_url` varchar(100) NOT NULL,
-      `description` text NOT NULL,
-      `category` varchar(100) NOT NULL,
-      `image` varchar(100) NOT NULL,
-      `link` varchar(255) NOT NULL,
-      `datetime` datetime NOT NULL,
-      `enabled` tinyint(1) NOT NULL DEFAULT '1',
-      PRIMARY KEY (`id`)
-    ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+```
 
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE IF NOT EXISTS `blog_posts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `title_url` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  `last_updated` datetime NOT NULL,
+  `year` int(10) unsigned NOT NULL,
+  `month` int(10) unsigned NOT NULL,
+  `day` int(10) unsigned NOT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+
+CREATE TABLE IF NOT EXISTS `playground_links` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `url` varchar(200) NOT NULL,
+  `image_url` varchar(200) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  `view_order` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `view_order` (`view_order`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+CREATE TABLE IF NOT EXISTS `projects` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `portfolio_url` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+
+```
 
 Requirements:
 
