@@ -1,0 +1,725 @@
+body {
+  background: #fff;
+  word-wrap: break-word; }
+
+hr {
+  clear: left; }
+
+code {
+  display: inline;
+  margin-bottom: 0;
+  padding: 0; }
+
+pre > code {
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #222; }
+
+.pagination {
+  max-width: 100%;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0 0 20px; }
+
+.pagination li {
+  display: none;
+  float: left; }
+
+.pagination li a, .pagination li .current_page {
+  padding: 5px 8px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  text-decoration: none; }
+
+.pagination li:first-child a, .pagination li:first-child .current_page {
+  border: 1px solid #999; }
+
+.pagination li .current_page {
+  font-size: 1.3em;
+  font-weight: bold;
+  background-color: #999; }
+
+.pagination .first, .pagination .prev, .pagination .next, .pagination .last,
+.pagination .away_0,
+.pagination .away_1,
+.pagination .away_2,
+.pagination .away_3,
+.pagination .away_4 {
+  display: block; }
+
+body.home {
+  margin: 0; }
+  body.home #container {
+    margin: 20px auto 0;
+    width: 990px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    color: white; }
+    body.home #container a {
+      color: white;
+      text-decoration: none; }
+    body.home #container a:hover {
+      text-decoration: underline; }
+    body.home #container p {
+      margin: 0 0 20px; }
+    body.home #container h1 {
+      margin-top: 0; }
+    body.home #container #header {
+      background: #111;
+      width: 990px;
+      height: 190px;
+      position: relative; }
+      body.home #container #header #contact_info {
+        float: right;
+        text-align: right; }
+      body.home #container #header #contact_label {
+        float: right; }
+      body.home #container #header .mountains {
+        display: block;
+        width: 100%; }
+    body.home #container #navigation {
+      width: 300px;
+      float: right; }
+      body.home #container #navigation a {
+        display: block;
+        float: right;
+        width: 130px;
+        height: 130px;
+        background: #111;
+        margin: 20px 0 0 20px; }
+      body.home #container #navigation #dragons {
+        padding: 100px 0 0;
+        text-align: center;
+        color: #ddd;
+        clear: right; }
+    body.home #container #content {
+      color: #222;
+      width: 690px; }
+      body.home #container #content a {
+        color: #222;
+        background: #bbb; }
+      body.home #container #content h3 {
+        background: #111; }
+        body.home #container #content h3 span {
+          padding: 0 20px;
+          margin: 0 0 0 20px;
+          background: #fff; }
+      body.home #container #content h4 {
+        font-size: 20px;
+        margin-bottom: 0; }
+      body.home #container #content .breadcrumbs {
+        margin-top: 20px; }
+        body.home #container #content .breadcrumbs div {
+          display: inline; }
+      body.home #container #content .post_title {
+        clear: left;
+        background: #111;
+        color: white;
+        margin-bottom: 20px; }
+        body.home #container #content .post_title a {
+          background: #444;
+          color: white; }
+      body.home #container #content .post_preview_image {
+        float: left;
+        margin: 0 20px 20px 0; }
+      body.home #container #content .post_text {
+        margin-bottom: 40px; }
+      body.home #container #content .archive_link {
+        margin-top: 20px;
+        display: inline-block; }
+    body.home #container #footer {
+      background: #111;
+      margin: 20px 0;
+      clear: both; }
+      body.home #container #footer .mountains {
+        display: block;
+        width: 100%; }
+    body.home #container #experiments {
+      padding: 0;
+      margin: 0 0 20px;
+      overflow: auto;
+      list-style: none; }
+      body.home #container #experiments li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover; }
+
+body.blog {
+  margin: 0; }
+  body.blog #container {
+    margin: 20px auto 0;
+    width: 990px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    color: white; }
+    body.blog #container a {
+      color: white;
+      text-decoration: none; }
+    body.blog #container a:hover {
+      text-decoration: underline; }
+    body.blog #container p {
+      margin: 0 0 20px; }
+    body.blog #container h1 {
+      margin-top: 0; }
+    body.blog #container #header {
+      background: #111;
+      width: 990px;
+      height: 190px;
+      position: relative; }
+      body.blog #container #header #contact_info {
+        float: right;
+        text-align: right; }
+      body.blog #container #header #contact_label {
+        float: right; }
+      body.blog #container #header .mountains {
+        display: block;
+        width: 100%; }
+    body.blog #container #navigation {
+      width: 300px;
+      float: right; }
+      body.blog #container #navigation a {
+        display: block;
+        float: right;
+        width: 130px;
+        height: 130px;
+        background: #111;
+        margin: 20px 0 0 20px; }
+      body.blog #container #navigation #dragons {
+        padding: 100px 0 0;
+        text-align: center;
+        color: #ddd;
+        clear: right; }
+    body.blog #container #content {
+      color: #222;
+      width: 690px; }
+      body.blog #container #content a {
+        color: #222;
+        background: #bbb; }
+      body.blog #container #content h3 {
+        background: #111; }
+        body.blog #container #content h3 span {
+          padding: 0 20px;
+          margin: 0 0 0 20px;
+          background: #fff; }
+      body.blog #container #content h4 {
+        font-size: 20px;
+        margin-bottom: 0; }
+      body.blog #container #content .breadcrumbs {
+        margin-top: 20px; }
+        body.blog #container #content .breadcrumbs div {
+          display: inline; }
+      body.blog #container #content .post_title {
+        clear: left;
+        background: #111;
+        color: white;
+        margin-bottom: 20px; }
+        body.blog #container #content .post_title a {
+          background: #444;
+          color: white; }
+      body.blog #container #content .post_preview_image {
+        float: left;
+        margin: 0 20px 20px 0; }
+      body.blog #container #content .post_text {
+        margin-bottom: 40px; }
+      body.blog #container #content .archive_link {
+        margin-top: 20px;
+        display: inline-block; }
+    body.blog #container #footer {
+      background: #111;
+      margin: 20px 0;
+      clear: both; }
+      body.blog #container #footer .mountains {
+        display: block;
+        width: 100%; }
+    body.blog #container #experiments {
+      padding: 0;
+      margin: 0 0 20px;
+      overflow: auto;
+      list-style: none; }
+      body.blog #container #experiments li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover; }
+
+body.contact {
+  margin: 0; }
+  body.contact #container {
+    margin: 20px auto 0;
+    width: 990px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    color: white; }
+    body.contact #container a {
+      color: white;
+      text-decoration: none; }
+    body.contact #container a:hover {
+      text-decoration: underline; }
+    body.contact #container p {
+      margin: 0 0 20px; }
+    body.contact #container h1 {
+      margin-top: 0; }
+    body.contact #container #header {
+      background: #111;
+      width: 990px;
+      height: 190px;
+      position: relative; }
+      body.contact #container #header #contact_info {
+        float: right;
+        text-align: right; }
+      body.contact #container #header #contact_label {
+        float: right; }
+      body.contact #container #header .mountains {
+        display: block;
+        width: 100%; }
+    body.contact #container #navigation {
+      width: 300px;
+      float: right; }
+      body.contact #container #navigation a {
+        display: block;
+        float: right;
+        width: 130px;
+        height: 130px;
+        background: #111;
+        margin: 20px 0 0 20px; }
+      body.contact #container #navigation #dragons {
+        padding: 100px 0 0;
+        text-align: center;
+        color: #ddd;
+        clear: right; }
+    body.contact #container #content {
+      color: #222;
+      width: 690px; }
+      body.contact #container #content a {
+        color: #222;
+        background: #bbb; }
+      body.contact #container #content h3 {
+        background: #111; }
+        body.contact #container #content h3 span {
+          padding: 0 20px;
+          margin: 0 0 0 20px;
+          background: #fff; }
+      body.contact #container #content h4 {
+        font-size: 20px;
+        margin-bottom: 0; }
+      body.contact #container #content .breadcrumbs {
+        margin-top: 20px; }
+        body.contact #container #content .breadcrumbs div {
+          display: inline; }
+      body.contact #container #content .post_title {
+        clear: left;
+        background: #111;
+        color: white;
+        margin-bottom: 20px; }
+        body.contact #container #content .post_title a {
+          background: #444;
+          color: white; }
+      body.contact #container #content .post_preview_image {
+        float: left;
+        margin: 0 20px 20px 0; }
+      body.contact #container #content .post_text {
+        margin-bottom: 40px; }
+      body.contact #container #content .archive_link {
+        margin-top: 20px;
+        display: inline-block; }
+    body.contact #container #footer {
+      background: #111;
+      margin: 20px 0;
+      clear: both; }
+      body.contact #container #footer .mountains {
+        display: block;
+        width: 100%; }
+    body.contact #container #experiments {
+      padding: 0;
+      margin: 0 0 20px;
+      overflow: auto;
+      list-style: none; }
+      body.contact #container #experiments li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover; }
+
+body.admin {
+  margin: 0; }
+  body.admin #container {
+    margin: 20px auto 0;
+    width: 990px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    color: white; }
+    body.admin #container a {
+      color: white;
+      text-decoration: none; }
+    body.admin #container a:hover {
+      text-decoration: underline; }
+    body.admin #container p {
+      margin: 0 0 20px; }
+    body.admin #container h1 {
+      margin-top: 0; }
+    body.admin #container #header {
+      background: #111;
+      width: 990px;
+      height: 190px;
+      position: relative; }
+      body.admin #container #header #contact_info {
+        float: right;
+        text-align: right; }
+      body.admin #container #header #contact_label {
+        float: right; }
+      body.admin #container #header .mountains {
+        display: block;
+        width: 100%; }
+    body.admin #container #navigation {
+      width: 300px;
+      float: right; }
+      body.admin #container #navigation a {
+        display: block;
+        float: right;
+        width: 130px;
+        height: 130px;
+        background: #111;
+        margin: 20px 0 0 20px; }
+      body.admin #container #navigation #dragons {
+        padding: 100px 0 0;
+        text-align: center;
+        color: #ddd;
+        clear: right; }
+    body.admin #container #content {
+      color: #222;
+      width: 690px; }
+      body.admin #container #content a {
+        color: #222;
+        background: #bbb; }
+      body.admin #container #content h3 {
+        background: #111; }
+        body.admin #container #content h3 span {
+          padding: 0 20px;
+          margin: 0 0 0 20px;
+          background: #fff; }
+      body.admin #container #content h4 {
+        font-size: 20px;
+        margin-bottom: 0; }
+      body.admin #container #content .breadcrumbs {
+        margin-top: 20px; }
+        body.admin #container #content .breadcrumbs div {
+          display: inline; }
+      body.admin #container #content .post_title {
+        clear: left;
+        background: #111;
+        color: white;
+        margin-bottom: 20px; }
+        body.admin #container #content .post_title a {
+          background: #444;
+          color: white; }
+      body.admin #container #content .post_preview_image {
+        float: left;
+        margin: 0 20px 20px 0; }
+      body.admin #container #content .post_text {
+        margin-bottom: 40px; }
+      body.admin #container #content .archive_link {
+        margin-top: 20px;
+        display: inline-block; }
+    body.admin #container #footer {
+      background: #111;
+      margin: 20px 0;
+      clear: both; }
+      body.admin #container #footer .mountains {
+        display: block;
+        width: 100%; }
+    body.admin #container #experiments {
+      padding: 0;
+      margin: 0 0 20px;
+      overflow: auto;
+      list-style: none; }
+      body.admin #container #experiments li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover; }
+  body.admin h3 {
+    width: 100%; }
+  body.admin #container #content.blog #button_blog {
+    border-bottom: 20px solid #999; }
+  body.admin #container #content.portfolio #button_portfolio {
+    border-bottom: 20px solid #999; }
+  body.admin #container #content.playground #button_playground {
+    border-bottom: 20px solid #999; }
+  body.admin #container #content.blog_new #button_blog_new {
+    border-bottom: 20px solid #999; }
+  body.admin #container #content.portfolio_new #button_portfolio_new {
+    border-bottom: 20px solid #999; }
+  body.admin #container #content.playground_new #button_playground_new {
+    border-bottom: 20px solid #999; }
+  body.admin #container #content {
+    width: 100%; }
+    body.admin #container #content .button {
+      color: white;
+      display: inline-block;
+      width: 290px;
+      height: 40px;
+      background: #111;
+      margin: 20px 20px 20px 0; }
+  body.admin #results, body.admin #logout_results {
+    margin-top: 20px; }
+  body.admin #error {
+    background-color: #FF3636;
+    padding: 20px;
+    width: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+  body.admin #entries {
+    clear: left;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border: 1px solid #333;
+    width: 100%; }
+    body.admin #entries td, body.admin #entries th {
+      padding: 5px;
+      border: 1px dotted #666; }
+      body.admin #entries td button, body.admin #entries th button {
+        margin-right: 10px; }
+      body.admin #entries td .link_image, body.admin #entries th .link_image {
+        max-width: 300px; }
+    body.admin #entries th.actions {
+      width: 150px; }
+    body.admin #entries th.time {
+      width: 300px; }
+  body.admin #form_blog_new, body.admin #form_blog_edit, body.admin #form_portfolio_new, body.admin #form_portfolio_edit, body.admin #form_playground_new, body.admin #form_playground_edit {
+    background: #111;
+    margin: 0 0 20px;
+    padding: 20px; }
+    body.admin #form_blog_new input, body.admin #form_blog_edit input, body.admin #form_portfolio_new input, body.admin #form_portfolio_edit input, body.admin #form_playground_new input, body.admin #form_playground_edit input {
+      display: block; }
+    body.admin #form_blog_new #blog_title, body.admin #form_blog_new #portfolio_title, body.admin #form_blog_new #playground_title, body.admin #form_blog_new #playground_url, body.admin #form_blog_new #playground_image, body.admin #form_blog_new #portfolio_preview_image_url, body.admin #form_blog_edit #blog_title, body.admin #form_blog_edit #portfolio_title, body.admin #form_blog_edit #playground_title, body.admin #form_blog_edit #playground_url, body.admin #form_blog_edit #playground_image, body.admin #form_blog_edit #portfolio_preview_image_url, body.admin #form_portfolio_new #blog_title, body.admin #form_portfolio_new #portfolio_title, body.admin #form_portfolio_new #playground_title, body.admin #form_portfolio_new #playground_url, body.admin #form_portfolio_new #playground_image, body.admin #form_portfolio_new #portfolio_preview_image_url, body.admin #form_portfolio_edit #blog_title, body.admin #form_portfolio_edit #portfolio_title, body.admin #form_portfolio_edit #playground_title, body.admin #form_portfolio_edit #playground_url, body.admin #form_portfolio_edit #playground_image, body.admin #form_portfolio_edit #portfolio_preview_image_url, body.admin #form_playground_new #blog_title, body.admin #form_playground_new #portfolio_title, body.admin #form_playground_new #playground_title, body.admin #form_playground_new #playground_url, body.admin #form_playground_new #playground_image, body.admin #form_playground_new #portfolio_preview_image_url, body.admin #form_playground_edit #blog_title, body.admin #form_playground_edit #portfolio_title, body.admin #form_playground_edit #playground_title, body.admin #form_playground_edit #playground_url, body.admin #form_playground_edit #playground_image, body.admin #form_playground_edit #portfolio_preview_image_url {
+      width: 940px;
+      margin-bottom: 20px; }
+    body.admin #form_blog_new #portfolio_date, body.admin #form_blog_edit #portfolio_date, body.admin #form_portfolio_new #portfolio_date, body.admin #form_portfolio_edit #portfolio_date, body.admin #form_playground_new #portfolio_date, body.admin #form_playground_edit #portfolio_date {
+      width: 200px;
+      margin-bottom: 20px; }
+    body.admin #form_blog_new .button_submit, body.admin #form_blog_edit .button_submit, body.admin #form_portfolio_new .button_submit, body.admin #form_portfolio_edit .button_submit, body.admin #form_playground_new .button_submit, body.admin #form_playground_edit .button_submit {
+      margin-top: 20px; }
+    body.admin #form_blog_new #loading_animation, body.admin #form_blog_edit #loading_animation, body.admin #form_portfolio_new #loading_animation, body.admin #form_portfolio_edit #loading_animation, body.admin #form_playground_new #loading_animation, body.admin #form_playground_edit #loading_animation {
+      background: white;
+      padding: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px; }
+  body.admin #logout_form {
+    display: block;
+    clear: both; }
+
+body.playground {
+  margin: 0; }
+  body.playground #container {
+    margin: 20px auto 0;
+    width: 990px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    color: white; }
+    body.playground #container a {
+      color: white;
+      text-decoration: none; }
+    body.playground #container a:hover {
+      text-decoration: underline; }
+    body.playground #container p {
+      margin: 0 0 20px; }
+    body.playground #container h1 {
+      margin-top: 0; }
+    body.playground #container #header {
+      background: #111;
+      width: 990px;
+      height: 190px;
+      position: relative; }
+      body.playground #container #header #contact_info {
+        float: right;
+        text-align: right; }
+      body.playground #container #header #contact_label {
+        float: right; }
+      body.playground #container #header .mountains {
+        display: block;
+        width: 100%; }
+    body.playground #container #navigation {
+      width: 300px;
+      float: right; }
+      body.playground #container #navigation a {
+        display: block;
+        float: right;
+        width: 130px;
+        height: 130px;
+        background: #111;
+        margin: 20px 0 0 20px; }
+      body.playground #container #navigation #dragons {
+        padding: 100px 0 0;
+        text-align: center;
+        color: #ddd;
+        clear: right; }
+    body.playground #container #content {
+      color: #222;
+      width: 690px; }
+      body.playground #container #content a {
+        color: #222;
+        background: #bbb; }
+      body.playground #container #content h3 {
+        background: #111; }
+        body.playground #container #content h3 span {
+          padding: 0 20px;
+          margin: 0 0 0 20px;
+          background: #fff; }
+      body.playground #container #content h4 {
+        font-size: 20px;
+        margin-bottom: 0; }
+      body.playground #container #content .breadcrumbs {
+        margin-top: 20px; }
+        body.playground #container #content .breadcrumbs div {
+          display: inline; }
+      body.playground #container #content .post_title {
+        clear: left;
+        background: #111;
+        color: white;
+        margin-bottom: 20px; }
+        body.playground #container #content .post_title a {
+          background: #444;
+          color: white; }
+      body.playground #container #content .post_preview_image {
+        float: left;
+        margin: 0 20px 20px 0; }
+      body.playground #container #content .post_text {
+        margin-bottom: 40px; }
+      body.playground #container #content .archive_link {
+        margin-top: 20px;
+        display: inline-block; }
+    body.playground #container #footer {
+      background: #111;
+      margin: 20px 0;
+      clear: both; }
+      body.playground #container #footer .mountains {
+        display: block;
+        width: 100%; }
+    body.playground #container #experiments {
+      padding: 0;
+      margin: 0 0 20px;
+      overflow: auto;
+      list-style: none; }
+      body.playground #container #experiments li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover; }
+
+body.post {
+  margin: 0; }
+  body.post #container {
+    margin: 20px auto 0;
+    width: 990px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    color: white; }
+    body.post #container a {
+      color: white;
+      text-decoration: none; }
+    body.post #container a:hover {
+      text-decoration: underline; }
+    body.post #container p {
+      margin: 0 0 20px; }
+    body.post #container h1 {
+      margin-top: 0; }
+    body.post #container #header {
+      background: #111;
+      width: 990px;
+      height: 190px;
+      position: relative; }
+      body.post #container #header #contact_info {
+        float: right;
+        text-align: right; }
+      body.post #container #header #contact_label {
+        float: right; }
+      body.post #container #header .mountains {
+        display: block;
+        width: 100%; }
+    body.post #container #navigation {
+      width: 300px;
+      float: right; }
+      body.post #container #navigation a {
+        display: block;
+        float: right;
+        width: 130px;
+        height: 130px;
+        background: #111;
+        margin: 20px 0 0 20px; }
+      body.post #container #navigation #dragons {
+        padding: 100px 0 0;
+        text-align: center;
+        color: #ddd;
+        clear: right; }
+    body.post #container #content {
+      color: #222;
+      width: 690px; }
+      body.post #container #content a {
+        color: #222;
+        background: #bbb; }
+      body.post #container #content h3 {
+        background: #111; }
+        body.post #container #content h3 span {
+          padding: 0 20px;
+          margin: 0 0 0 20px;
+          background: #fff; }
+      body.post #container #content h4 {
+        font-size: 20px;
+        margin-bottom: 0; }
+      body.post #container #content .breadcrumbs {
+        margin-top: 20px; }
+        body.post #container #content .breadcrumbs div {
+          display: inline; }
+      body.post #container #content .post_title {
+        clear: left;
+        background: #111;
+        color: white;
+        margin-bottom: 20px; }
+        body.post #container #content .post_title a {
+          background: #444;
+          color: white; }
+      body.post #container #content .post_preview_image {
+        float: left;
+        margin: 0 20px 20px 0; }
+      body.post #container #content .post_text {
+        margin-bottom: 40px; }
+      body.post #container #content .archive_link {
+        margin-top: 20px;
+        display: inline-block; }
+    body.post #container #footer {
+      background: #111;
+      margin: 20px 0;
+      clear: both; }
+      body.post #container #footer .mountains {
+        display: block;
+        width: 100%; }
+    body.post #container #experiments {
+      padding: 0;
+      margin: 0 0 20px;
+      overflow: auto;
+      list-style: none; }
+      body.post #container #experiments li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover; }
+  body.post #content .post_page {
+    margin-top: 20px; }

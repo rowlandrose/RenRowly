@@ -8,9 +8,9 @@ require_once 'controller.php';
 
 class Home extends Controller
 {
-	function __construct()
+	function __construct($data)
 	{
-		$this->load_view('home.php', null);
+		$this->load_view('home.php', $data);
 	}
 
 }

@@ -5,6 +5,9 @@ session_start();
 
 // Add GZIP?
 
+// Needed to properly use 'iconv()' to make url-friendly strings
+setlocale(LC_CTYPE, 'en_US.UTF8');
+
 // Define Root Folder Paths
 define('REQUIRE_VERSION', dirname(__FILE__));
 $path_arr = explode('/', REQUIRE_VERSION);
@@ -24,6 +27,9 @@ define('LINK_FULL_URL', DOMAIN_URL . '/' . $root_folder_name);
 
 // Require constants
 require_once REQUIRE_VERSION . '/config.php';
+
+// Require common php functions
+require_once REQUIRE_VERSION . '/common.php';
 
 // Enable PHP 5.3 namespace class autoloading
 spl_autoload_register();

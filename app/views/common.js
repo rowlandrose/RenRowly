@@ -1,1 +1,0 @@
-// All javascript you want to be loaded on every page view

@@ -1,1 +1,0 @@
-// Example js file for a page, has same name as php file (opptional convention)

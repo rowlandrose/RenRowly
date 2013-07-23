@@ -1,0 +1,314 @@
+
+@mixin border_radius($px) {
+	-webkit-border-radius: $px;
+	-moz-border-radius: $px;
+	border-radius: $px;
+}
+
+body {
+	background: #fff;
+	word-wrap: break-word;
+}
+
+hr {
+	clear: left;
+}
+
+code {
+	display: inline;
+	margin-bottom: 0;
+	padding: 0;
+}
+pre > code {
+	display: block;
+	margin-bottom: 20px;
+	padding: 20px;
+	border: 1px solid #222;
+}
+
+// Responsive Pagination Styles 
+.pagination {
+	max-width: 100%;
+	display: block;
+	float: left;
+	padding: 0;
+	margin: 0 0 20px;
+}
+.pagination li {
+	display: none;
+	float: left;
+}
+.pagination li a, .pagination li .current_page {
+	padding: 5px 8px;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	text-decoration: none;
+}
+.pagination li:first-child a, .pagination li:first-child .current_page {
+	border: 1px solid #999;
+}
+.pagination li .current_page {
+	font-size: 1.3em;
+	font-weight: bold;
+	background-color: #999;
+}
+.pagination .first, .pagination .prev, .pagination .next, .pagination .last,
+.pagination .away_0,
+.pagination .away_1,
+.pagination .away_2,
+.pagination .away_3,
+.pagination .away_4, {
+	display: block;
+}
+
+@mixin all_pages {
+	margin: 0;
+	#container {
+		margin: 20px auto 0;
+		width: 990px;
+		font-family: 'Lucida Console', Monaco, monospace;
+		color: white;
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		p {
+			margin: 0 0 20px;
+		}
+		h1 {
+			margin-top: 0;
+		}
+		#header {
+			background: #111;
+			width: 990px;
+			height: 190px;
+			position: relative;
+			#contact_info {
+				float: right;
+				text-align: right;
+			}
+			#contact_label {
+				float: right;
+			}
+			.mountains {
+				display: block;
+				width: 100%;
+			}
+		}
+		#navigation {
+			width: 300px;
+			float: right;
+			a {
+				display: block;
+				float: right;
+				width: 130px;
+				height: 130px;
+				background: #111;
+				margin: 20px 0 0 20px;
+			}
+			#dragons {
+				padding: 100px 0 0;
+				text-align: center;
+				color: #ddd;
+				clear: right;
+			}
+		}
+		#content {
+			color: #222;
+			width: 690px;
+			a {
+				color: #222;
+				background: #bbb;
+			}
+			h3 {
+				background: #111;
+				span {
+					padding: 0 20px;
+					margin: 0 0 0 20px;
+					background: #fff;
+				}
+			}
+			h4 {
+				font-size: 20px;
+				margin-bottom: 0;
+			}
+			.breadcrumbs {
+				margin-top: 20px;
+				div {
+					display: inline;
+				}
+			}
+			.post_title {
+				clear: left;
+				background: #111;
+				color: white;
+				margin-bottom: 20px;
+				a {
+					background: #444;
+					color: white;
+				}
+			}
+			.post_preview_image {
+				float: left;
+				margin: 0 20px 20px 0;
+			}
+			.post_text {
+				margin-bottom: 40px;
+			}
+			.archive_link {
+				margin-top: 20px;
+				display: inline-block;
+			}
+		}
+		#footer {
+			background: #111;
+			margin: 20px 0;
+			clear: both;
+			.mountains {
+				display: block;
+				width: 100%;
+			}
+		}
+		#experiments {
+			padding: 0;
+			margin: 0 0 20px;
+			overflow: auto;
+			list-style: none;
+			li {
+				display: block;
+				float: left;
+				width: 50%;
+				height: 0;
+				padding-bottom: 50%;
+				background-position: center;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+body.home {
+	@include all_pages;
+}
+
+body.blog {
+	@include all_pages;
+}
+
+body.contact {
+	@include all_pages;
+}
+
+body.admin {
+	@include all_pages;
+	h3 {
+		width: 100%;
+	}
+	#container {
+		#content.blog #button_blog {
+			border-bottom: 20px solid #999;
+		}
+		#content.portfolio #button_portfolio {
+			border-bottom: 20px solid #999;
+		}
+		#content.playground #button_playground {
+			border-bottom: 20px solid #999;
+		}
+		#content.blog_new #button_blog_new {
+			border-bottom: 20px solid #999;
+		}
+		#content.portfolio_new #button_portfolio_new {
+			border-bottom: 20px solid #999;
+		}
+		#content.playground_new #button_playground_new {
+			border-bottom: 20px solid #999;
+		}
+		#content {
+			width: 100%;
+			.button {
+				color: white;
+				display: inline-block;
+				width: 290px;
+				height: 40px;
+				background: #111;
+				margin: 20px 20px 20px 0;
+			}
+		}
+	}
+	#results, #logout_results {
+		margin-top: 20px;
+	}
+	#error {
+		background-color:#FF3636;
+		padding: 20px;
+		width: 300px;
+
+		@include border_radius(10px);
+	}
+	#entries {
+		clear: left;
+		margin-bottom: 20px;
+		border-collapse: collapse;
+		border: 1px solid #333;
+		width: 100%;
+		td, th {
+			padding: 5px;
+			border: 1px dotted #666;
+			button {
+				margin-right: 10px;
+			}
+			.link_image {
+				max-width: 300px;
+			}
+		}
+		th.actions {
+			width: 150px;
+		}
+		th.time {
+			width: 300px;
+		}
+	}
+	#form_blog_new, #form_blog_edit, #form_portfolio_new, #form_portfolio_edit, #form_playground_new, #form_playground_edit {
+		background: #111;
+		margin: 0 0 20px;
+		padding: 20px;
+		input {
+			display: block;
+		}
+		#blog_title, #portfolio_title, #playground_title, #playground_url, #playground_image, #portfolio_preview_image_url {
+			width: 940px;
+			margin-bottom: 20px;
+		}
+		#portfolio_date {
+			width: 200px;
+			margin-bottom: 20px;
+		}
+		.button_submit {
+			margin-top: 20px;
+		}
+		#loading_animation {
+			background: white;
+			padding: 10px;
+			@include border_radius(10px);
+		}
+	}
+	#logout_form {
+		display: block;
+		clear: both;
+	}
+}
+
+body.playground {
+	@include all_pages;
+}
+
+body.post {
+	@include all_pages;
+	#content .post_page {
+		margin-top: 20px;
+	}
+}

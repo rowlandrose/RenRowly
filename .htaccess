@@ -1,13 +1,15 @@
 RewriteEngine On
 
-# Files in these directories will not be accessable via browser (just an extra security measure)
-# If you install RenRowly on any subfolders, put them here
+# Files in these directories will not be accessible via browser (just an extra security measure)
 RewriteCond $0 ^(.+)/controllers/ [OR]
 RewriteCond $0 ^(.+)/models/ [OR]
 
 # Do not rewrite path if file or directory actually exists
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Disable directory listings
+Options -Indexes 
 
 # Have all requests (except those indicated above) to go index.php
 RewriteRule ^(.*)$ index.php/$1?%{QUERY_STRING} [L]
