@@ -11,18 +11,24 @@ $param_3 = $path_components[3];
 $param_4 = $path_components[4];
 $param_5 = $path_components[5];
 
+if(LINK_RELATIVE_URL != '') {
+	$base_url = LINK_RELATIVE_URL;
+} else {
+	$base_url = '/';
+}
+
 ?>
 
 <div class="breadcrumbs">
 
 	<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href=<? echo '"' . LINK_RELATIVE_URL . '"'; ?> itemprop="url">
+		<a href=<? echo '"' . $base_url . '"'; ?> itemprop="url">
 			<span itemprop="title">Home</span></a> 
 		&rsaquo;
 	</div>
 
 	<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href=<? echo '"' . LINK_RELATIVE_URL . $page_name . '"'; ?> itemprop="url">
+		<a href=<? echo '"' . $base_url . $page_name . '"'; ?> itemprop="url">
 			<span itemprop="title"><? echo ucfirst($page_name); ?></span></a> 
 		<? if($param_1) { echo '&rsaquo;'; } ?>
 	</div>
@@ -34,7 +40,7 @@ $param_5 = $path_components[5];
 		?>
 
 		<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-			<a href=<? echo '"' . LINK_RELATIVE_URL . $page_name . '/' . $param_1 . '/' . $param_2 . '/' . $param_3 . '/' . $param_4 . '/' . $param_5 . '"'; ?> itemprop="url">
+			<a href=<? echo '"' . $base_url . $page_name . '/' . $param_1 . '/' . $param_2 . '/' . $param_3 . '/' . $param_4 . '/' . $param_5 . '"'; ?> itemprop="url">
 				<span itemprop="title"><? 
 					if(strlen($param_5) > POST_TITLE_BREADCRUMB_LENGTH) {
 						echo substr($param_5, 0, POST_TITLE_BREADCRUMB_LENGTH) . '...'; 
@@ -51,7 +57,7 @@ $param_5 = $path_components[5];
 		?>
 
 		<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-			<a href=<? echo '"' . LINK_RELATIVE_URL . $page_name . '/' . $param_1 . '/' . $param_2 . '"'; ?> itemprop="url">
+			<a href=<? echo '"' . $base_url . $page_name . '/' . $param_1 . '/' . $param_2 . '"'; ?> itemprop="url">
 				<span itemprop="title"><? echo $param_2; ?></span></a>
 		</div>
 
@@ -62,7 +68,7 @@ $param_5 = $path_components[5];
 		?>
 
 		<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-			<a href=<? echo '"' . LINK_RELATIVE_URL . $page_name . '/' . $param_1 . '"'; ?> itemprop="url">
+			<a href=<? echo '"' . $base_url . $page_name . '/' . $param_1 . '"'; ?> itemprop="url">
 				<span itemprop="title"><? echo $param_1; ?></span></a>
 		</div>
 
