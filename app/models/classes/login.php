@@ -16,7 +16,7 @@ class Login
 
 		// Eventually lookup users in database and see if there is a match.
 		// For now just compare to value entered here.
-		if($username == 'rowlandrose') {
+		if($username == ADMIN_USERNAME) {
 			return true;
 		} else {
 			return false;
@@ -29,7 +29,7 @@ class Login
 
 		// Eventually lookup users in a database and see if the username / hashed password matches.
 		// For now just compare to value entered here.
-		if($user == 'rowlandrose' && $pass == 'Wfeiff88') {
+		if($user == ADMIN_USERNAME && $pass == ADMIN_PASSWORD) {
 			return true;
 		} else {
 			return false;

@@ -2,6 +2,9 @@
 
 //// User Configurable Constants
 
+define('ADMIN_USERNAME', 'enterusernamehere');
+define('ADMIN_PASSWORD', 'enterpasswordhere');
+
 define('BLOG_ENTRIES_PER_PAGE', 4);
 define('BLOG_PREVIEW_CHAR_LIMIT', 220);
 
